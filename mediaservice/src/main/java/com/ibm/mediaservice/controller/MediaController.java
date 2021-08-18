@@ -296,16 +296,36 @@ public class MediaController {
 				.body(file);
 	}
 
-	@PostMapping(value = "/media/addcomment/{mediaid}/user/{userid}")
-	public ResponseEntity<String> addcomment(@PathVariable long mediaid, @PathVariable String userid, HttpServletRequest request , MediaDTO commentMedia) {
-
-		return null ;
+	@PutMapping(value = "/media/addcomment/{mediaid}/user/{userid}")
+	public ResponseEntity<Optional<Media>> addcomment(@PathVariable long mediaid, @PathVariable String userid, Media commentMedia) {
+		Optional<Media> response = null ;
+		try {
+			response =  mediaService.getMediaByUserIdAndMediaId(userid, mediaid);
+			if (!response.isPresent())
+				return ResponseEntity.notFound().build();
+			response.get().setId(mediaid);
+			response.get().setUserid(userid);
+			response.get().setNumberofcomments(commentMedia.getNumberofcomments());
+			mediaService.saveFile(response.get());
+		} catch (Exception e) {
+			throw new StorageException("Failed to update the media " + mediaid + userid, e);
+		}
+		return new ResponseEntity<Optional<Media>>(response, HttpStatus.OK);
 	}
 	
 	@GetMapping(value = "/media/getcomment/{mediaid}/user/{userid}")
-	public ResponseEntity<String> getcomments(@PathVariable long mediaid, @PathVariable String userid, HttpServletRequest request , MediaDTO commentMedia) {
-
-		return null ;
+	public ResponseEntity<List<String>> getcomments(@PathVariable long mediaid, @PathVariable String userid) {
+		Optional<Media> response = null ;
+		List<String> commentList = new ArrayList<String>();
+		try {	
+		response =  mediaService.getMediaByUserIdAndMediaId(userid, mediaid);
+		if (!response.isPresent())
+			return ResponseEntity.notFound().build();
+		commentList = response.get().getNumberofcomments();
+	} catch (Exception e) {
+		throw new StorageException("Failed to update the media " + mediaid + userid, e);
+	}
+		return new ResponseEntity<List<String>>(commentList, HttpStatus.OK);
 	}
 
 
