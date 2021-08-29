@@ -1,4 +1,4 @@
-package com.pixogram.usermanagement.constraint;
+package com.ibm.usermanagement.constraint;
 
 import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.TYPE;

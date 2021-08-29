@@ -1,4 +1,4 @@
-package com.pixogram.usermanagement.models;
+package com.ibm.usermanagement.models;
 
 import java.util.Collection;
 import java.util.Date;

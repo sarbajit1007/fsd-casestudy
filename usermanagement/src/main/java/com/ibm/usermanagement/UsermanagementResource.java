@@ -1,4 +1,4 @@
-package com.pixogram.usermanagement;
+package com.ibm.usermanagement;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pixogram.usermanagement.models.AuthenticationRequest;
-import com.pixogram.usermanagement.models.AuthenticationResponse;
-import com.pixogram.usermanagement.service.UserServiceImpl;
-import com.pixogram.usermanagement.util.JwtUtil;
+import com.ibm.usermanagement.models.AuthenticationRequest;
+import com.ibm.usermanagement.models.AuthenticationResponse;
+import com.ibm.usermanagement.service.UserServiceImpl;
+import com.ibm.usermanagement.util.JwtUtil;
 
 @RestController
 @RequestMapping({"/authenticate"})

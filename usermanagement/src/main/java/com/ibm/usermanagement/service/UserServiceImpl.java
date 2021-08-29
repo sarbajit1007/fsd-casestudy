@@ -1,4 +1,4 @@
-package com.pixogram.usermanagement.service;
+package com.ibm.usermanagement.service;
 
 import java.util.Arrays;
 import java.util.Calendar;
@@ -13,10 +13,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.pixogram.usermanagement.models.Role;
-import com.pixogram.usermanagement.models.User;
-import com.pixogram.usermanagement.repository.UserRepository;
-import com.pixogram.usermanagement.web.dto.UserRegistrationDto;
+import com.ibm.usermanagement.models.Role;
+import com.ibm.usermanagement.models.User;
+import com.ibm.usermanagement.repository.UserRepository;
+import com.ibm.usermanagement.web.dto.UserRegistrationDto;
 
 @Service
 public class UserServiceImpl implements UserService {

@@ -1,4 +1,4 @@
-package com.pixogram.usermanagement.models;
+package com.ibm.usermanagement.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.pixogram.usermanagement.filters;
+package com.ibm.usermanagement.filters;
 
 import java.io.IOException;
 
@@ -15,8 +15,8 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.pixogram.usermanagement.service.UserServiceImpl;
-import com.pixogram.usermanagement.util.JwtUtil;
+import com.ibm.usermanagement.service.UserServiceImpl;
+import com.ibm.usermanagement.util.JwtUtil;
 
 
 @Component

@@ -1,4 +1,4 @@
-package com.pixogram.usermanagement.config;
+package com.ibm.usermanagement.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,8 +17,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
-import com.pixogram.usermanagement.filters.JwtRequestFilter;
-import com.pixogram.usermanagement.service.UserService;
+import com.ibm.usermanagement.filters.JwtRequestFilter;
+import com.ibm.usermanagement.service.UserService;
 
 
 @Configuration

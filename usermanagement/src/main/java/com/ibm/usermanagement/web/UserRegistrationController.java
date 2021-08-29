@@ -1,4 +1,4 @@
-package com.pixogram.usermanagement.web;
+package com.ibm.usermanagement.web;
 
 import javax.validation.Valid;
 
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.pixogram.usermanagement.models.User;
-import com.pixogram.usermanagement.service.UserService;
-import com.pixogram.usermanagement.web.dto.UserRegistrationDto;
+import com.ibm.usermanagement.models.User;
+import com.ibm.usermanagement.service.UserService;
+import com.ibm.usermanagement.web.dto.UserRegistrationDto;
 
 @Controller
 @RequestMapping("/registration")

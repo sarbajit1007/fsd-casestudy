@@ -1,4 +1,4 @@
-package com.pixogram.usermanagement.util;
+package com.ibm.usermanagement.util;
 
 import java.util.Date;
 import java.util.HashMap;

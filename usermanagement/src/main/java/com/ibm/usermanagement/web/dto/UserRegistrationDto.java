@@ -1,4 +1,4 @@
-package com.pixogram.usermanagement.web.dto;
+package com.ibm.usermanagement.web.dto;
 
 import java.util.Date;
 
@@ -6,7 +6,7 @@ import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
-import com.pixogram.usermanagement.constraint.FieldMatch;
+import com.ibm.usermanagement.constraint.FieldMatch;
 
 @FieldMatch.List({
 	 @FieldMatch(first = "password", second = "confirmPassword",  message = "The password fields must match")

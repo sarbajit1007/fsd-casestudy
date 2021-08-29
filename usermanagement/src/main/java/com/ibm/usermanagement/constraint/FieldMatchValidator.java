@@ -1,4 +1,4 @@
-package com.pixogram.usermanagement.constraint;
+package com.ibm.usermanagement.constraint;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
